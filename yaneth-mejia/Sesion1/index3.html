@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Sesión I</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Shift + Alt + A -->
+        <!-- Primera fila -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="text" name="user_name" id="user_name">
+                <label for="user_name">Nombre</label>
+            </div>
+        </div>
+
+        <!-- Segunda fila -->
+        <div class="row">
+            <!-- Dos columnas -->
+            <div class="input-field col s6">
+                <input type="text" name="lastname" id="lastname">
+                <label for="lastname">Apellido paterno</label>
+            </div>
+
+            <div class="input-field col s6">
+                <input type="text" name="lastname1" id="lastname1">
+                <label for="lastname1">Apellido materno</label>
+            </div>
+        </div>
+
+        <!-- Tercera fila -->
+        <div class="row">
+            <div class="input-field col s3">
+                <input type="number" name="user_age" id="user_age" min="18" max="99" class="validate">
+                <label for="user_age">Edad</label>
+                <span class="helper-text" data-error="Debe ser mayor de edad">18-99</span>
+            </div>
+
+            <div class="input-field col s7">
+                <input type="email" name="email_user" id="email_user" class="validate">
+                <label for="email_user">Correo</label>
+                <span class="helper-text" data-error="No ingreso una cuenta correcta"></span>
+            </div>
+        </div>
+        <!-- Cuarta fila -->
+        <div class="row center">
+            <div class="col s6">
+                <button class="btn waves-effect waves-light" type="submit" onclick="capturaValores()">Registrarse
+                    <i class="material-icons right">schedule_send</i>
+                </button>
+            </div>
+            <div class="col s6">
+                <button class="btn waves-effect waves-light" type="reset">Cancelar
+                    <i class="material-icons left">cancel_schedule_send</i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Salida -->
+        <div class="row">
+            <output id="s2"></output>
+            <br>
+            <!-- Salto de linea -->
+            <label id="s1"></label>
+            <br>
+            <!-- Salto de linea -->
+            <output id="s3"></output>
+            
+        </div>
+    </div>
+    <script src="javascript/captura_valores.js"></script>
+</body>
+
+</html>

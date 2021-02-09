@@ -1,0 +1,17 @@
+Class Room
+https://classroom.google.com/u/1/c/MTY1MTMxMjU5NDg0
+
+Tablero Actividades:
+https://trello.com/b/ZbWIWdc5/javascript-material-design
+
+Para los iconos
+https://material.io/
+https://material.io/resources/icons/?style=baseline
+
+Para las formas CSS
+https://materializecss.com/buttons.html
+https://materializecss.com/color.html
+
+Fotos gratuitas
+https://www.pexels.com/es-es
+https://es.pngtree.com/
