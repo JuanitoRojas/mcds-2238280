@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+   <!-- Importamos nuestra hoja de estilos 
+  <link rel="stylesheet" href="css/styles.css">
+  -->
+   
+   <!-- Script JQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   
+    <title>Mi Documento</title>
+</head>
+
+<body>
+
+  <div>
+    <!-- 1. Fila -->
+    <div class="container">
+      <div class="row">
+        <!-- 1. Columna -->
+        <div class="col s6 m6 l6">
+          <div class="card">
+            <div class="card-content black-text">
+              <span class="card-title">Ejercicio 1</span>
+              <img class="responsive-img" src="img/img1.png" alt="">  
+            </div>
+          </div>
+        </div>
+        <!-- 2. Columna -->
+        <div class="col s6 m6 l6">
+          <div class="card-panel black-text">
+          <h6><span class="card-title">Digitar el tamaño del arreglo</span></h6>
+          <div class="input-field col s6">
+            <input placeholder="# de 1 a 20" type="number" name="num" id="num" min="1" max="20" class="validate">
+          </div>
+          
+        
+          <button type="submit" id="boton" name="boton">
+            <a class="btn-small btn-floating pulse"><i class="material-icons">send</i></a>
+          </button>  
+              
+        </div>
+        </div>
+        <div class="col s6 m6 l6">
+          <div class="card-panel black-text">
+          <h6><span class="card-title">Resultado:</span></h6>
+          <div id="valor">
+            <label id="fvalor">Aqui los datos</label>
+          </div>  
+        </div>
+        </div>
+    </div>
+
+    </div>
+   
+     <!-- 2. Fila -->
+      <div class="container">
+        <div class="row">
+          <!-- 1. Columna -->
+          <div class="col s6 m6 l6">
+            <div class="card">
+              <div class="card-content black-text">
+                <span class="card-title">Ejercicio 2</span>
+                <img class="responsive-img" src="img/img2.png" alt="">  
+              </div>
+            </div>
+          </div>
+          <!-- 2. Columna -->
+          <div class="col s6 m6 l6">
+            <div class="card-panel black-text">
+              <h6><span class="card-title">Digite los Datos de su Superheroe</span></h6>
+            </div>
+
+            <div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="date1" type="text" id="date1" class="validate">
+                <label for="icon_prefix">Nombre</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">perm_identity</i>
+                <input id="date2" type="text" class="validate">
+                <label for="perm_identity">Alias</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">grade</i>
+                <input id="date3" type="number" min="1" class="validate">
+                <label for="grade">Level Power</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">public</i>
+                <input id="date4" type="text" class="validate">
+                <label for="public">Universo</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">person_pin_circle</i>
+                <input id="date5" type="text" class="validate">
+                <label for="person_pin_circle">Raza</label>
+              </div>
+              <div class="input-field col s12 m12 l12">
+                <button type="submit" id="boton2" name="boton2">
+                <a class="waves-effect indigo darken-3 btn-small btn-large btn-floating pulse"><i class="material-icons">library_add</i></a>
+                </button>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- 3. Fila -->
+    <div class="container">
+      <div class="row">
+        <!-- 1. Columna -->
+        <div class="col s6 m6 l6">
+          <div class="card">
+            <div class="card-content black-text">
+              <span class="card-title">Ejercicio 3</span>
+              <img class="responsive-img" src="img/img3.png" alt="">  
+            </div>
+          </div>
+        </div>
+        <!-- 2. Columna -->
+    <div class="col s6 m6 l6">
+      <div class="card-panel black-text">
+        <h6><span class="card-title">Digite los datos del arreglo:</span></h6>
+        <div id="valor">
+          <label id="fvalor">Aqui los datos</label>
+        </div>
+        <button type="submit" id="boton" name="boton">
+          <a class="btn-small btn-floating pulse"><i class="material-icons">send</i></a>
+        </button>  
+      </div>
+     </div>
+
+    </div>
+   
+ </div>
+   
+</body>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Llamado Ejercicio 1 -->
+  <script>
+    var boton = document.getElementById("boton");
+      boton.addEventListener("click", () => {
+      var cantidadNumeros = document.getElementById("num").value;
+      var myArray = []
+      while(myArray.length < cantidadNumeros ){
+        var numeroAleatorio = Math.floor(Math.random()*20 + 40);
+        var existe = false;
+        for(var i=0;i<myArray.length;i++){
+	        if(myArray [i] == numeroAleatorio){
+          existe = true;
+          break;
+          }
+          }
+        if(!existe){
+        myArray[myArray.length] = numeroAleatorio;
+        }
+    }
+    var valor = myArray;
+    document.getElementById('fvalor').innerHTML = valor;
+});
+  </script>
+  <!-- Llamado Ejercicio 2 -->
+  <script>
+  var boton = document.getElementById("boton2");
+      boton.addEventListener("click", () => {
+
+        var date1 = document.getElementById("date1").value;
+        var date2 = document.getElementById("date2").value;
+        var date3 = document.getElementById("date3").value;
+        var date4 = document.getElementById("date4").value;
+        var date5 = document.getElementById("date5").value;
+
+          const superheroes = [
+              {
+                name: 'Bruce Waine',
+                alias: 'Batman',
+                powerLevel: '50',
+                universe: 'DC Commics',
+                race: 'Human',
+              },
+              {
+                
+                name: 'Bruce Waine',
+                alias: 'Batman',
+                powerLevel: '50',
+                universe: 'DC Commics',
+                race: 'Human',
+              }
+          ];
+      superheroes.push({name:date1, alias:date2,powerLevel:date3,universe:date4,race:date5});
+
+    console.log(superheroes) 
+      });
+    
+    
+  </script>
+</html>

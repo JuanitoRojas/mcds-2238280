@@ -1,0 +1,22 @@
+.checkeable input {
+    /* 
+    Esconder elementos al usuario 
+    visibility:hidden
+    display:none
+    */
+
+    display: none;
+
+}
+
+.checkeable img {
+    width: 60px;
+    height: auto;
+    border: 5px solid transparent;
+}
+
+.checkeable input:checked+img {
+
+    border-color:black;
+
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+   <!-- Importamos nuestra hoja de estilos -->
+   <link rel="stylesheet" href="css/styles.css">
+
+   <!-- Script JQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   
+    <title>Mi Documento</title>
+</head>
+
+<body>
+
+    <div class="container section">
+        <nav class="grey darken-1">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">
+                    <img class="circle" width="60" height="auto" src="img/nasa.png"  alt="">
+                </a>
+                
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+                    <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                    <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                    <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+          </nav>        
+
+
+        <!-- Formulario -->
+        <form id="formCheckbox">
+            <div class="section">
+                <!-- Primera fila -->
+                <div class="row">
+                    
+                    <!-- Primera Columna -->
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" name="user_name" id="user_name">
+                        <label for="user_name">Nombre</label>
+                    </div>
+
+                    <!-- Segunda Columna -->
+                    <div class="input-field col s6">
+                        <select name="product" id="product" class="browser-default">
+                            <option value="" disabled selected>Seleccione una opcion</option>
+                            <option value="">Tennis</option>
+                            <option value="">Sacos deportivos</option>
+                            <option value="">Black Out</option>
+                        </select>
+                    </div>
+                </div> 
+                <!-- Segunda Fila -->
+                <div class="row">
+                    <div class="col s2"><label class="checkeable"><input value="1" type="checkbox" name="imagenesSeleccionadas[]" id="1"><img class="responsive-img circle" src="img/733536-social/png/002-youtube.png" alt=""></label></div>
+                    <div class="col s2"><label class="checkeable"><input value="2" type="checkbox" name="imagenesSeleccionadas[]" id="2"><img class="responsive-img circle" src="img/733536-social/png/007-whatsapp.png" alt=""></label></div>
+                    <div class="col s2"><label class="checkeable"><input value="3" type="checkbox" name="imagenesSeleccionadas[]" id="3"><img class="responsive-img circle" src="img/733536-social/png/014-twitter.png" alt=""></label></div>
+                    <div class="col s2"><label class="checkeable"><input value="4" type="checkbox" name="imagenesSeleccionadas[]" id="4"><img class="responsive-img circle" src="img/733536-social/png/022-skype.png" alt=""></label></div>
+                    <div class="col s2"><label class="checkeable"><input value="5" type="checkbox" name="imagenesSeleccionadas[]" id="5"><img class="responsive-img circle" src="img/733536-social/png/031-linkedin.png" alt=""></label></div>
+                    <div class="col s2"><label class="checkeable"><input value="6" type="checkbox" name="imagenesSeleccionadas[]" id="6"><img class="responsive-img circle" src="img/733536-social/png/039-github.png" alt=""></label></div>
+                </div>
+             </div>           
+             <!-- Fila de botones --> 
+             <div class="row center">
+                 <button class="btn waves-effect waves-ligth" id="enviar">Aceptar</button>
+             </div>
+        </form>
+
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+
+
+</body>
+
+<script type="text/javascript">
+    
+    /* El metoro ready valida si se cargo todo el DOM  en una WEB */
+    $(document).ready(function() {
+        /* 
+        funtion nombre (){}
+        closure or funcion anonima funtion(){}
+        */
+        $('#enviar').click(function() { /* buscar el elemento cuyo metadato coincida con el indicado en las comillas */
+        
+            let arrayProductosSelect = new Array();/* Declarando un array */
+
+            $('#formCkeckbox input[type=ckeckbox]').each(function() { /* each lo que hace es iterar sobre el elemento del DOM */
+                if (this.ckecked) {
+                    arrayProductosSelect.push($(this).val());
+                }
+            });
+            if  (arrayProductosSelect.length !=0)
+                alert('Productos Seleccionados ' + arrayProductosSelect);
+            else
+                alert('No ha seleccionado productos');
+            return false;
+        });
+    });
+
+</script>
+</html>
